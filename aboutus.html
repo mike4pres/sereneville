@@ -33,6 +33,7 @@
 
       nav ul li {
          padding: 10px 15px;
+         position: relative;
       }
 
       nav ul li a {
@@ -48,9 +49,22 @@
          text-decoration: underline;
       }
 
+      /* Active Page Indicator (Blue Bubble) */
       nav ul li a.active {
          color: #ffcc00; /* Highlight color */
          font-weight: bold;
+      }
+
+      nav ul li a.active::after {
+         content: '';
+         position: absolute;
+         bottom: -5px; /* Position the bubble just below the text */
+         left: 50%;
+         transform: translateX(-50%);
+         width: 8px;
+         height: 8px;
+         border-radius: 50%;
+         background-color: #4db8ff; /* Blue bubble */
       }
 
       .hero {
@@ -266,19 +280,4 @@
             <div class="about-text">
                <p>Welcome to Serene Ville Digital Solutions. I'm Andrew Okech, a passionate Computer Science student at Daystar University, and this platform represents my journey in web development and digital services.</p>
                <p>What began as a personal project to enhance my technical skills has evolved into a professional service offering. Serene Ville serves dual purposes - it's both a portfolio of my capabilities and a legitimate business providing quality digital solutions to clients.</p>
-               <p>As I continue my studies, I'm simultaneously gaining real-world experience by working with actual clients, solving genuine business challenges through technology. This hands-on approach complements my academic learning and helps me stay current with industry trends.</p>
-            </div>
-
-            <div class="education">
-               <h4><i class="fas fa-graduation-cap"></i> Education</h4>
-               <div class="education-item">
-                  <h5>Daystar University</h5>
-                  <p>Bachelor of Science in Computer Science</p>
-                  <p><i class="far fa-calendar-alt"></i> 2021 - Present</p>
-               </div>
-            </div>
-         </div>
-
-         <div class="mission-card">
-            <h3>Our Mission</h3>
-            <p>At Serene Ville, we bridge the gap between academic knowledge and practical application. Our
+               <p>As I continue my studies, I'm simultaneously gaining real-world experience by working with actual clients, solving genuine
