@@ -13,20 +13,21 @@
       }
 
       nav {
-         background-color: #1a1a1a;
+         background-color: #121212;
          padding: 15px 0;
          box-shadow: 0 2px 10px rgba(0,0,0,0.5);
          position: fixed;
          width: 100%;
          top: 0;
          z-index: 1000;
+         border-bottom: 1px solid #333;
       }
 
       nav ul {
          list-style: none;
          display: flex;
          justify-content: center;
-         gap: 25px;
+         gap: 30px;
          padding: 0;
          margin: 0;
       }
@@ -41,30 +42,21 @@
          font-weight: bold;
          text-decoration: none;
          font-size: 18px;
-         transition: color 0.3s;
+         transition: color 0.3s ease, transform 0.3s ease;
       }
 
       nav ul li a:hover {
          color: #80ccff;
-         text-decoration: underline;
+         transform: scale(1.1);
       }
 
       /* Active Page Indicator (Blue Bubble) */
       nav ul li a.active {
-         color: #ffcc00; /* Highlight color */
+         color: #4db8ff; /* Highlight color */
          font-weight: bold;
-      }
-
-      nav ul li a.active::after {
-         content: '';
-         position: absolute;
-         bottom: -5px; /* Position the bubble just below the text */
-         left: 50%;
-         transform: translateX(-50%);
-         width: 8px;
-         height: 8px;
-         border-radius: 50%;
-         background-color: #4db8ff; /* Blue bubble */
+         padding: 5px 10px;
+         border-radius: 20px;
+         background-color: rgba(77, 184, 255, 0.2); /* Light blue background */
       }
 
       .hero {
@@ -280,4 +272,10 @@
             <div class="about-text">
                <p>Welcome to Serene Ville Digital Solutions. I'm Andrew Okech, a passionate Computer Science student at Daystar University, and this platform represents my journey in web development and digital services.</p>
                <p>What began as a personal project to enhance my technical skills has evolved into a professional service offering. Serene Ville serves dual purposes - it's both a portfolio of my capabilities and a legitimate business providing quality digital solutions to clients.</p>
-               <p>As I continue my studies, I'm simultaneously gaining real-world experience by working with actual clients, solving genuine
+               <p>As I continue my studies, I'm simultaneously gaining real-world experience by working with actual clients, solving genuine business challenges through technology. This hands-on approach complements my academic learning and helps me stay current with industry trends.</p>
+            </div>
+
+            <div class="education">
+               <h4><i class="fas fa-graduation-cap"></i> Education</h4>
+               <div class="education-item">
+                  <h5
