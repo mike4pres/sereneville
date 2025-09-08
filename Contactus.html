@@ -17,11 +17,16 @@
       nav {
          background-color: #1a1a1a;
          padding: 15px 0;
-         box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+         box-shadow: 0 2px 10px rgba(0,0,0,0.3); /* Subtle shadow for depth */
          position: fixed;
          width: 100%;
          top: 0;
          z-index: 1000;
+         transition: background-color 0.3s ease;
+      }
+
+      nav:hover {
+         background-color: #333; /* Darker shade when hovered */
       }
 
       nav ul {
@@ -43,30 +48,33 @@
          font-weight: bold;
          text-decoration: none;
          font-size: 18px;
-         transition: color 0.3s;
+         transition: color 0.3s, transform 0.3s;
       }
 
       nav ul li a:hover {
          color: #80ccff;
-         text-decoration: underline;
+         transform: scale(1.1); /* Slight scale effect for hover */
       }
 
-      /* Active Page Indicator (Bubble) */
       nav ul li a.active {
-         color: #ffcc00; /* Highlight color */
+         color: #4db8ff; /* Keep the active link color blue */
          font-weight: bold;
       }
 
       nav ul li a.active::after {
          content: '';
          position: absolute;
-         bottom: -5px; /* Position the bubble just below the text */
+         bottom: -5px;
          left: 50%;
          transform: translateX(-50%);
-         width: 8px;
-         height: 8px;
+         width: 12px; /* Increase the size of the bubble */
+         height: 12px;
          border-radius: 50%;
          background-color: #4db8ff; /* Blue bubble */
+      }
+
+      nav ul li a.active:hover {
+         color: #4db8ff; /* Ensures blue stays on hover */
       }
 
       .content {
